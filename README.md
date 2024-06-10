@@ -18,6 +18,8 @@ We checked business and hardware metrics and they were the same on two instances
 We captured jfr and cpu/memory flamegraph and it showed CPU was consumed by access to threadlocal.
 We put in MDC ~3-5 parameters for every request. 
 This configuration has been running smoothly for over a year, and this is the first occurrence of the issue.
+
+Also we observed load was dropped when we tried to profile application(see stages on the graph)
 ```
 java.lang.ThreadLocal$ThreadLocalMap.expungeStaleEntry(int)
 java.lang.ThreadLocal$ThreadLocalMap.remove(ThreadLocal)
